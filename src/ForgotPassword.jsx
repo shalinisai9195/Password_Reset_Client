@@ -13,7 +13,8 @@ function ForgotPassword(){
     const handleSubmit = (e)=>{
         e.preventDefault()
   
-        axios.post('http://127.0.0.1:3001/forgot-password', {email})
+        // axios.post('http://127.0.0.1:3001/forgot-password', {email})
+        axios.post('https://authentication-reset-pwd.onrender.com/forgot-password', {email})
         .then(result =>{
            if(result.data.Status === 'Success'){
                  navigate('/login')
@@ -51,14 +52,7 @@ function ForgotPassword(){
               
         </div>
     </div>
-
-    )
-    
-    
-    
-    
-
-
+ )
 }
 
 export  default ForgotPassword;

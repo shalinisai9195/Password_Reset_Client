@@ -15,7 +15,8 @@ function Login(){
     const handleSubmit = (e)=>{
         e.preventDefault()
   
-        axios.post('http://127.0.0.1:3001/login', {email, password})
+        // axios.post('http://127.0.0.1:3001/login', {email, password})
+        axios.post('https://authentication-reset-pwd.onrender.com/login', {email, password})
         .then(result =>{
            console.log(result.data)
            if(result.data.Status === 'Success'){
@@ -78,12 +79,6 @@ function Login(){
     </div>
 
     )
-    
-    
-    
-    
-
-
-}
+  }
 
 export  default Login;

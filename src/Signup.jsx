@@ -15,7 +15,8 @@ function Signup() {
   const handleSubmit = (e)=>{
       e.preventDefault()
 
-      axios.post('http://127.0.0.1:3001/register', {name, email, password})
+      // axios.post('http://127.0.0.1:3001/register', {name, email, password})
+      axios.post('https://authentication-reset-pwd.onrender.com/register', {name, email, password})
       .then(res => {
         alert("Creater")
       

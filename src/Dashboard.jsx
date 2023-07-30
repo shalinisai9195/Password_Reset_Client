@@ -11,7 +11,8 @@ function Dashboard(){
    const navigate = useNavigate();
 
    useEffect( () => {
-       axios.get('http://127.0.0.1:3001/dashboard')
+    //    axios.get('http://127.0.0.1:3001/dashboard')
+       axios.get('https://authentication-reset-pwd.onrender.com/dashboard')
        .then(res =>{
            if(res.data === "Success"){
               setSuc("Success OK")
