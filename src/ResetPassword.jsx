@@ -15,8 +15,8 @@ function ResetPassword(){
     const handleSubmit = (e)=>{
         e.preventDefault()
   
-        // axios.post(`http://127.0.0.1:3001/reset_password/${id}/${token}`, {password})
-        axios.post(`https://authentication-reset-pwd.onrender.com/reset_password/${id}/${token}`, {password})
+        //axios.post(`http://127.0.0.1:3001/reset_password/${id}/${token}`, {password})
+       axios.post(`https://authentication-reset-pwd.onrender.com/reset_password/${id}/${token}`, {password})
         .then(result =>{
            if(result.data.Status === 'Success'){
                  navigate('/login')
